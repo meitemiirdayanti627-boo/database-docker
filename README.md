@@ -65,8 +65,11 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: latihan_db
+    volumes:
+      - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
+
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -78,8 +81,9 @@ services:
       PMA_HOST: mysql
       PMA_USER: root
       PMA_PASSWORD: root
-    depends_on:
-      - mysql
+
+volumes:
+  mysql_data:
 ```
 
 ## **Cara Menjalankan Project (CMD/PowerShell)**
