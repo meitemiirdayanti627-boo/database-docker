@@ -52,25 +52,31 @@ Berikut merupakan konfigurasi docker-compose.yml yang digunakan
 untuk menjalankan service database MySQL dengan persistent storage.
 
 ```docker-compose.yml
-version: "3.8"
+version: '3.8'
 
 services:
-  db:
-    image: mysql:8.0
-    container_name: mysql-db
+  mysql:
+    image: mysql:5.7
+    container_name: mysql_db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: testdb
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: latihan_db
     ports:
       - "3306:3306"
-    volumes:
-      - db_data:/var/lib/mysql
 
-volumes:
-  db_data:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: root
+      PMA_PASSWORD: root
+    depends_on:
+      - mysql
 ```
 
 ## **Cara Menjalankan Project (CMD/PowerShell)**
