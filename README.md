@@ -20,11 +20,15 @@ Proyek ini bertujuan untuk menjalankan service database MySQL menggunakan Docker
 - phpMyAdmin
 
 ## Cara Menjalankan
-1. Jalankan perintah:
+
+1. Pastikan Docker dan Docker Compose sudah terinstall.
+2. Clone repository ini atau download source code.
+3. Masuk ke folder project.
+4. Jalankan perintah:
    docker compose up -d
-2. Buka browser dan akses:
+5. Buka browser dan akses:
    http://localhost:8080
-3. Login phpMyAdmin:
+6. Login ke phpMyAdmin dengan:
    - Username: root
    - Password: root
 
