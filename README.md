@@ -3,9 +3,9 @@
 ## Kelompok 4
 
 **Anggota:**
-1. Rangga Airlangga  
-2. Richard Fernando  
-3. Temi Irdayanti  
+1. Rangga Airlangga (062430701457)
+2. Richard Fernando  (062430701458)
+3. Temi Irdayanti  (062430701459)
 
 **Kelas:** 3CD  
 **Mata Kuliah:** Praktik Sistem Operasi
@@ -90,7 +90,7 @@ volumes:
 1. Buka CMD atau PowerShell
 2. Masuk ke folder project:
 ```Masuk ke folder project
-   cd "C:\Users\ASUS\Documents\SEM 3\Sistem Operasi\PSO\UAS\database-container"
+   cd path/ke/folder/database-container 
 ```
 3. Jalankan container
    ```Jalankan container
@@ -128,6 +128,12 @@ phpMyAdmin digunakan sebagai antarmuka berbasis web untuk mengelola database MyS
 2. phpMyAdmin dapat diakses melalui browser pada alamat:
    ```phpMyAdmin dapat diakses melalui browser pada alamat:
        http://localhost:8080
+
+Melalui phpMyAdmin, pengguna dapat:
+-Melihat database
+-Membuat tabel
+-Menambahkan data
+-Menjalankan perintah SQL
    ```
 
 ## **Kesimpulan**
