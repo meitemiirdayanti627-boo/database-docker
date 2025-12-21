@@ -76,7 +76,7 @@ volumes:
 ##**Cara Menjalankan Project (CMD/PowerShell)**
 1. Buka CMD atau PowerShell
 2. Masuk ke folder project:
-   ```
+   ```Masuk ke folder project
 cd "C:\Users\ASUS\Documents\SEM 3\Sistem Operasi\PSO\UAS\database-container"
 ```
 4. Cek status container
