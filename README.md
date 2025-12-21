@@ -30,9 +30,9 @@ Project ini dibuat untuk memenuhi tugas **UAS Mata Kuliah Sistem Operasi**.
 
 ## Struktur Folder Project
 database-container/
-├── Dockerfile
-├── docker-compose.yml
-└── README.md
+-Dockerfile
+-docker-compose.yml
+-README.md
 
 ## Dockerfile
 Berikut merupakan konfigurasi Dockerfile yang digunakan untuk
@@ -129,11 +129,7 @@ phpMyAdmin digunakan sebagai antarmuka berbasis web untuk mengelola database MyS
    ```phpMyAdmin dapat diakses melalui browser pada alamat:
        http://localhost:8080
    ```
-Melalui phpMyAdmin, pengguna dapat:
--Melihat database
--Membuat tabel
--Menambahkan data
--Menjalankan perintah SQL
+Melalui phpMyAdmin, pengguna dapat: Melihat database, membuat tabel, menambahkan data, dan menjalankan perintah SQL
    
 
 ## **Kesimpulan**
