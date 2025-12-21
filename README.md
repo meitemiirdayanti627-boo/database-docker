@@ -4,8 +4,10 @@
 1. Rangga Airlangga
 2. Richard Fernando
 3. Temi Irdayanti
-**Kelas      :** 3CD
-**Mata Kuliah:** Praktik Sistem Operasi
+**Kelas :**
+3CD
+**Mata Kuliah:**
+Praktik Sistem Operasi
 
 ## Deskripsi
 Proyek ini bertujuan untuk menjalankan service database MySQL menggunakan Docker dengan persistent storage.
