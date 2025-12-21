@@ -73,15 +73,13 @@ volumes:
   db_data:
 ```
 
-#*Cara Menjalankan Project (CMD / PowerShell)*
-1. Buka CMD atau PowerShell
-
-Masuk ke folder project:
-Cara Menjalankan Project (CMD / PowerShell)
+##**Cara Menjalankan Project (CMD/PowerShell)**
 1. Buka CMD atau PowerShell
 2. Masuk ke folder project:
+   ```
 cd "C:\Users\ASUS\Documents\SEM 3\Sistem Operasi\PSO\UAS\database-container"
-3. Cek status container
+```
+4. Cek status container
 docker ps
 
 #*Cara Mengakses Database MySQL*
