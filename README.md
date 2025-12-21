@@ -10,66 +10,94 @@
 **Kelas:** 3CD  
 **Mata Kuliah:** Praktik Sistem Operasi
 
-# Database Service Menggunakan Docker (MySQL)
+# Service Database MySQL Menggunakan Docker
 
-## Deskripsi Proyek
-Proyek ini bertujuan untuk membuat service database MySQL menggunakan Docker
-dengan persistent storage. Data database tetap tersimpan meskipun container
-dihentikan atau dijalankan ulang.
+## Deskripsi
+Project ini merupakan implementasi **service database MySQL** menggunakan **Docker**
+dan **Docker Compose** dengan **persistent storage**.  
+Persistent storage digunakan agar data database tetap tersimpan meskipun container
+dihentikan atau dihapus.
+
+Project ini dibuat untuk memenuhi tugas **UAS Mata Kuliah Sistem Operasi**.
 
 ## Teknologi yang Digunakan
 - Docker
 - Docker Compose
 - MySQL 8.0
-- Docker Volume
+- Docker Volume (Persistent Storage)
 
-## Struktur Folder
+
+## Struktur Folder Project
 database-container/
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md
 
-## Konfigurasi
-Dockerfile digunakan untuk membuat image MySQL dengan konfigurasi environment
-database. Docker Compose digunakan untuk menjalankan service database serta
-mengatur port dan volume penyimpanan.
+## Dockerfile
+Berikut merupakan konfigurasi Dockerfile yang digunakan untuk
+mendefinisikan image database MySQL.
 
-## Cara Menjalankan
-1. Masuk ke folder project:
-   cd database-container
+```dockerfile
+FROM mysql:8.0
 
-2. Jalankan database:
-   docker-compose up -d
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=testdb
+ENV MYSQL_USER=user
+ENV MYSQL_PASSWORD=password
 
-3. Cek status container:
-   docker ps
+EXPOSE 3306
 
-Jika berhasil, container mysql-db akan berstatus Up.
+## **docker-compose.yml**
+Berikut merupakan konfigurasi docker-compose.yml yang digunakan
+untuk menjalankan service database MySQL dengan persistent storage.
 
-## Persistent Storage
-Proyek ini menggunakan Docker Volume bernama db_data yang di-mount ke
-/var/lib/mysql sehingga data database tidak hilang meskipun container dihentikan
-atau dijalankan ulang.
+version: "3.8"
 
-## Pengujian Database (Opsional)
-Masuk ke MySQL:
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
+
+#**Cara Menjalankan Project (CMD / PowerShell)**
+1. Buka CMD atau PowerShell
+
+Masuk ke folder project:
+Cara Menjalankan Project (CMD / PowerShell)
+1. Buka CMD atau PowerShell
+2. Masuk ke folder project:
+cd "C:\Users\ASUS\Documents\SEM 3\Sistem Operasi\PSO\UAS\database-container"
+3. Cek status container
+docker ps
+
+#**Cara Mengakses Database MySQL**
+1. Masuk ke MySQL di dalam container:
 docker exec -it mysql-db mysql -u root -p
+2. Masukka password : root
+3. Cek database: SHOW DATABASES;
 
-Password:
-root
+#**Persistent Storage**
+-Project ini menggunakan Docker Volume bernama: db_data
+-Volume ini di-mount ke direktori: /var/lib/mysql
 
-Cek database:
-SHOW DATABASES;
+Dengan demikian, data database tidak akan hilang walaupun container dihentikan,
+direstart, atau dihapus.
 
-## Yang Dikumpulkan
-- Source code (GitHub/GitLab)
-- Dockerfile
-- docker-compose.yml
-- Dokumentasi instalasi & penggunaan (README.md)
-- Video demo (5–10 menit)
-- Presentasi kelompok (opsional)
+#**Kesimpulan**
 
-## Kesimpulan
-Service database MySQL berhasil dijalankan menggunakan Docker dengan persistent
-storage menggunakan Docker Volume.
-r dihentikan dan dijalankan kembali.
+Service database MySQL berhasil dibuat dan dijalankan menggunakan Docker
+dengan persistent storage. Implementasi ini telah memenuhi ketentuan tugas
+pembuatan service database menggunakan Docker.
+
