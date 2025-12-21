@@ -23,7 +23,8 @@ Project ini dibuat untuk memenuhi tugas **UAS Mata Kuliah Sistem Operasi**.
 ## Teknologi yang Digunakan
 - Docker
 - Docker Compose
-- MySQL 8.0
+- MySQL 5.7
+- phpMyAdmin
 - Docker Volume (Persistent Storage)
 
 
@@ -99,7 +100,7 @@ services:
 ## **Cara Mengakses Database mySQL**
 1. Masuk ke MySQL di dalam container:
    ```Masuk ke MySQL di dalam container
-      docker exec -it mysql-db mysql -u root -p
+      docker exec -it mysql_db mysql -u root -p
    ```
 2. Masukkan password :
    ```Masukkan password
