@@ -73,7 +73,7 @@ volumes:
   db_data:
 ```
 
-##**Cara Menjalankan Project (CMD/PowerShell)**
+## **Cara Menjalankan Project (CMD/PowerShell)**
 1. Buka CMD atau PowerShell
 2. Masuk ke folder project:
 ```Masuk ke folder project
@@ -81,23 +81,32 @@ volumes:
 ```
 
 4. Cek status container
-docker ps
+   ```
+    docker ps
+   ```
 
-#*Cara Mengakses Database MySQL*
+## **Cara Mengakses Database mySQL**
 1. Masuk ke MySQL di dalam container:
-docker exec -it mysql-db mysql -u root -p
-2. Masukka password : root
-3. Cek database: SHOW DATABASES;
-
-#*Persistent Storage*
+   ```Masuk ke MySQL di dalam container
+      docker exec -it mysql-db mysql -u root -p
+   ```
+2. Masukkan password :
+   ```Masukkan password
+       root
+   ```
+   
+3. Cek database:
+   ```Cek database
+      SHOW DATABASES;
+   ```
+## **Persistent Storage**
 -Project ini menggunakan Docker Volume bernama: db_data
 -Volume ini di-mount ke direktori: /var/lib/mysql
 
 Dengan demikian, data database tidak akan hilang walaupun container dihentikan,
 direstart, atau dihapus.
 
-#*Kesimpulan*
-
+## **Kesimpulan**
 Service database MySQL berhasil dibuat dan dijalankan menggunakan Docker
 dengan persistent storage. Implementasi ini telah memenuhi ketentuan tugas
 pembuatan service database menggunakan Docker.
