@@ -106,6 +106,17 @@ volumes:
 Dengan demikian, data database tidak akan hilang walaupun container dihentikan,
 direstart, atau dihapus.
 
+## **Output PhpMyAdmin**
+phpMyAdmin digunakan sebagai antarmuka berbasis web untuk mengelola database MySQL yang berjalan di dalam container Docker, seperti melihat database, tabel, dan menjalankan query SQL tanpa harus masuk ke terminal.
+1. Service MySQL berhasil dijalankan menggunakan Docker.
+2. phpMyAdmin dapat diakses melalui browser pada alamat:
+   ```phpMyAdmin dapat diakses melalui browser pada alamat:
+       http://localhost:8080
+   ```
+3. Pengguna dapat mengelola database (membuat database, tabel, dan data) melalui phpMyAdmin.
+4. Data database tetap tersimpan walaupun container dihentikan dan dijalankan kembali karena menggunakan Docker Volume.
+
+
 ## **Kesimpulan**
 Service database MySQL berhasil dibuat dan dijalankan menggunakan Docker
 dengan persistent storage. Implementasi ini telah memenuhi ketentuan tugas
