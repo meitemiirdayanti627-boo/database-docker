@@ -48,8 +48,10 @@ ENV MYSQL_PASSWORD=password
 EXPOSE 3306
 ```
 ## docker-compose.yml
+File docker-compose.yml digunakan untuk menjalankan dua service, yaitu MySQL dan phpMyAdmin, menggunakan Docker Compose.
+Service MySQL menggunakan image mysql:5.7 dan service phpMyAdmin digunakan untuk mempermudah pengelolaan database melalui antarmuka web.
 Berikut merupakan konfigurasi docker-compose.yml yang digunakan
-untuk menjalankan service database MySQL dengan persistent storage.
+untuk menjalankan service database MySQL dengan persistent storage. 
 
 ```docker-compose.yml
 version: '3.8'
@@ -85,7 +87,10 @@ services:
 ```Masuk ke folder project
    cd "C:\Users\ASUS\Documents\SEM 3\Sistem Operasi\PSO\UAS\database-container"
 ```
-
+3. Jalankan container
+   ```Jalankan container
+       docker compose up -d
+   ```
 4. Cek status container
    ```
     docker ps
@@ -112,16 +117,13 @@ services:
 Dengan demikian, data database tidak akan hilang walaupun container dihentikan,
 direstart, atau dihapus.
 
-## **Output PhpMyAdmin**
+## **Akses PhpMyAdmin**
 phpMyAdmin digunakan sebagai antarmuka berbasis web untuk mengelola database MySQL yang berjalan di dalam container Docker, seperti melihat database, tabel, dan menjalankan query SQL tanpa harus masuk ke terminal.
 1. Service MySQL berhasil dijalankan menggunakan Docker.
 2. phpMyAdmin dapat diakses melalui browser pada alamat:
    ```phpMyAdmin dapat diakses melalui browser pada alamat:
        http://localhost:8080
    ```
-3. Pengguna dapat mengelola database (membuat database, tabel, dan data) melalui phpMyAdmin.
-4. Data database tetap tersimpan walaupun container dihentikan dan dijalankan kembali karena menggunakan Docker Volume.
-
 
 ## **Kesimpulan**
 Service database MySQL berhasil dibuat dan dijalankan menggunakan Docker
