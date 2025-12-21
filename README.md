@@ -47,6 +47,6 @@ ENV MYSQL_PASSWORD=password
 
 EXPOSE 3306
 
-# Docker-compose.yml
+# **Docker-compose.yml**
 Berikut merupakan konfigurasi docker-compose.yml yang digunakan
 untuk menjalankan service database MySQL dengan persistent storage.
