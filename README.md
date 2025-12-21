@@ -1,8 +1,9 @@
 # Database Service Menggunakan Docker
 
-**Kelompok 4 :** 1. Rangga Airlangga
-                 2. Richard Fernando
-                 3. Temi Irdayanti
+**Kelompok 4 :** 
+1. Rangga Airlangga
+2. Richard Fernando
+3. Temi Irdayanti
 **Kelas      :** 3CD
 **Mata Kuliah:** Praktik Sistem Operasi
 
