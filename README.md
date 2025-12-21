@@ -128,13 +128,13 @@ phpMyAdmin digunakan sebagai antarmuka berbasis web untuk mengelola database MyS
 2. phpMyAdmin dapat diakses melalui browser pada alamat:
    ```phpMyAdmin dapat diakses melalui browser pada alamat:
        http://localhost:8080
-
+   ```
 Melalui phpMyAdmin, pengguna dapat:
 -Melihat database
 -Membuat tabel
 -Menambahkan data
 -Menjalankan perintah SQL
-   ```
+   
 
 ## **Kesimpulan**
 Service database MySQL berhasil dibuat dan dijalankan menggunakan Docker
